@@ -4,6 +4,7 @@ import "./style.css";
 window.onload = function() {
   newCard();
 };
+
 function newCard() {
   let icons = ["♦", "♥", "♠", "♣"];
   let numbers = [
@@ -19,7 +20,7 @@ function newCard() {
     "10",
     "J",
     "Q",
-    "K"
+    "K",
   ];
 
   let randomIcon = Math.floor(Math.random() * icons.length);
@@ -36,10 +37,10 @@ function newCard() {
   document.querySelector("#top").className = colorSuit;
   document.querySelector("#number").className = colorSuit;
   document.querySelector("#bottom").className = colorSuit;
-
-  const button = document.querySelector("button");
-
-  button.addEventListener("click", event => {
-    newCard();
-  });
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", (event) => {
+  newCard();
+});
