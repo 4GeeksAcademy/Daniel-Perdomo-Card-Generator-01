@@ -20,7 +20,7 @@ function newCard() {
     "10",
     "J",
     "Q",
-    "K",
+    "K"
   ];
 
   let randomIcon = Math.floor(Math.random() * icons.length);
@@ -34,6 +34,7 @@ function newCard() {
     icons[randomIcon] === "♦" || icons[randomIcon] === "♥"
       ? "text-danger"
       : "text-dark";
+
   document.querySelector("#top").className = colorSuit;
   document.querySelector("#number").className = colorSuit;
   document.querySelector("#bottom").className = colorSuit;
@@ -41,6 +42,10 @@ function newCard() {
 
 const button = document.querySelector("button");
 
-button.addEventListener("click", (event) => {
+button.addEventListener("click", event => {
   newCard();
 });
+
+setTimeout(function() {
+  newCard();
+}, 10000);
