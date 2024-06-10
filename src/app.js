@@ -46,6 +46,6 @@ button.addEventListener("click", event => {
   newCard();
 });
 
-setTimeout(function() {
+setInterval(function() {
   newCard();
 }, 10000);
